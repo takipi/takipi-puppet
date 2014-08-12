@@ -4,9 +4,9 @@
   "author": "Panagiotis Moustafellos <pmoust@gmail.com>",
   "summary": "Takipi installs a daemon process and a JVM agent library on your servers. These two components work in tandem to log and send data to Takipi's analysis servers. Together they detect events (such as exceptions or logged errors) happening within your app and automatically create the code needed to log and collect the data you'll need to debug these errors in production.",
   "license": "Apache 2.0",
-  "source": "https://github.com/pmoust/takipi",
-  "project_page": "https://github.com/pmoust/takipi",
-  "issues_url": "https://github.com/pmoust/takipi/issues",
+  "source": "https://github.com/takipi/takipi-puppet.git",
+  "project_page": "https://github.com/takipi/takipi-puppet",
+  "issues_url": "https://github.com/takipi/takipi-puppet/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",

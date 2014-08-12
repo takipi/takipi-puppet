@@ -4,7 +4,7 @@ Exec {
     path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
 }
 class {'takipi' :
-  secret_key  => 'YOUR_KEY'
+  secret_key  => $secret_key
 } ->
 exec { 'check if Takipi is configured correctly':
   command   => "grep '${secret_key}' /opt/takipi/work/secret.key;

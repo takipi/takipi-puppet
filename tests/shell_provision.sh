@@ -29,7 +29,6 @@ fi
 if [ ! -d "$PUPPET_DIR" ]; then
   mkdir -p $PUPPET_DIR
 fi
-cp /vagrant/metadata.json $PUPPET_DIR
 
 if [ ! -d $PUPPET_DIR/modules/stdlib ]; then
   git clone https://github.com/puppetlabs/puppetlabs-stdlib.git $PUPPET_DIR/modules/stdlib
