@@ -78,7 +78,7 @@ class takipi (
     cwd       => '/opt/takipi/etc',
     command   => "/bin/bash ./takipi-setup-package ${secret_key}",
     logoutput => true,
-    unless    => "grep -q ${secrect_key} /opt/takipi/work/secret.key",
+    unless    => "grep -q ${secret_key} /opt/takipi/work/secret.key",
   }
 
 }
