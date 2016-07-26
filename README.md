@@ -30,7 +30,7 @@ Takipi installs a daemon process and a JVM agent library on your servers. These 
 
 ### What takipi affects
 
-* Installs Java on the node that Takipi is to be installed, handled by `puppetlabs-java` module. 
+* Installs Java on the node that Takipi is to be installed, handled by `puppetlabs-java` module. (optional)
 * Installs Takipi base package.
 * Adds the Takipi secret key (found under `/opt/takipi/work/secret.key`) and completes package installation.
 
@@ -47,10 +47,22 @@ Create your account at https://app.takipi.com/account.html and get your secret k
 
 ## Usage
 
+Basic usage:
+
 ```
 include takipi
 class {'::takipi':
   secret_key => 'YOUR_SECRET_KEY',
+}
+```
+
+Takipi without external Java installation:
+
+```
+include takipi
+class {'::takipi':
+  manage_java => false,
+  secret_key  => 'YOUR_SECRET_KEY',
 }
 ```
 
