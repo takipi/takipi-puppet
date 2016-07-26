@@ -27,13 +27,17 @@
 # Copyright 2014 Takipi, Inc.
 #
 class takipi (
-  $secret_key = 'YOUR_KEY',
-  $source    = undef,
+  $secret_key  = 'YOUR_KEY',
+  $source      = undef,
+  $manage_java = true,
 ) {
-  # Add java dependency, for more information on puppetlabs-java module
-  # see https://github.com/puppetlabs/puppetlabs-java/blob/master/manifests/init.pp
-  include 'java'
-  Class['java'] -> Class['takipi']
+  
+  if str2bool("$manage_java") {
+    # Add java dependency, for more information on puppetlabs-java module
+    # see https://github.com/puppetlabs/puppetlabs-java/blob/master/manifests/init.pp
+    include 'java'
+    Class['java'] -> Class['takipi']
+  }
 
   case $osfamily {
 
