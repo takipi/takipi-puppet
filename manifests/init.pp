@@ -76,9 +76,9 @@ class takipi (
   ->
   exec { 'install takipi':
     cwd       => '/opt/takipi/etc',
-    command   => "/bin/bash ./takipi-setup-package $secret_key",
+    command   => "/bin/bash ./takipi-setup-package ${secret_key}",
     logoutput => true,
-    creates   => '/opt/takipi/bin/takipi-service',
+    unless    => "grep -q ${secrect_key} /opt/takipi/work/secret.key",
   }
 
 }
