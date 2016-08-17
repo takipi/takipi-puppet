@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :takipi_centos do |re|
     re.vm.box = "centos-6.5-x64-vbox-4.3.6"
     re.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-puppet.box"
-    re.vm.network :private_network, ip: "10.00.33.91"
+    re.vm.network :private_network, ip: "10.0.33.91"
     re.vm.provision :shell, :path => "shell_provision.sh"
     re.vm.provision "puppet" do |p|
       p.manifest_file = "takipi.pp"
@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :takipi_ubuntu do |re|
     re.vm.box = "ubuntu-13.10-x64-vbox4.3.6"
     re.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-x64-virtualbox-puppet.box"
-    re.vm.network :private_network, ip: "10.00.33.92"
+    re.vm.network :private_network, ip: "10.0.33.92"
     re.vm.provision :shell, :path => "shell_provision.sh"
     re.vm.provision "puppet" do |p|
       p.manifest_file = "takipi.pp"
