@@ -38,8 +38,8 @@ Takipi installs a daemon process and a JVM agent library on your servers. These 
 
 Requires;
 
-* `puppetlabs-stdlib`
-* `puppetlabs-java`
+* `puppetlabs-stdlib`         (puppet module install puppetlabs-stdlib)
+* `puppetlabs-java <= 1.3.0`  (puppet module install puppetlabs-java --version 1.3.0)
 
 ### Beginning with takipi
 
@@ -49,13 +49,26 @@ Create your account at https://app.takipi.com/account.html and get your secret k
 
 Basic usage:
 
+copy the takipi module to the puppet modules path (for example /etc/puppet/modules/takipi)
 ```
+
 include takipi
 class {'::takipi':
   secret_key => 'YOUR_SECRET_KEY',
 }
 ```
 
+Takipi with specific Java version:
+
+distribution, will define the type of environment JRE or JDK
+package, will represent the full packge name
+
+```
+class {'java':
+  distribution          => 'jdk',
+  package               => undef,
+}
+```
 Takipi without external Java installation:
 
 ```
@@ -94,4 +107,15 @@ Usage:
 ## Changelog
 
 0.4.0 @pmoust - Initial Release
+
+0.5.0 - 2017-07-04
+### Added
+- Java Class variables
+- Config scripts to Vagrant folder
+- Testing the module against CentOS 7, Ubuntu Trusty, Ubuntu Xenial
+
+### Fixed
+- Java Class declaration
+- Support in verity of Distros
+- takipi configuration
 

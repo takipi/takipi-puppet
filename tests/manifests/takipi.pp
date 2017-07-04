@@ -1,5 +1,5 @@
 # Takipi test manifest, add a valid Takipi secret key
-$secret_key = 'YOUR_KEY_HERE'
+$secret_key = 'S3875#YAFwDEGg5oSIU+TM#G0G7VATLOqJIKtAMy1MObfFINaQmVT5hGYLQ+cpPuq4=#87a1'
 Exec {
     path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
 }
