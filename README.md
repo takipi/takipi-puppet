@@ -59,9 +59,10 @@ class {'::takipi':
 ```
 
 Takipi with specific Java version:
+
 distribution, will define the type of environment JRE or JDK
-version, will represent the major version
 package, will represent the full packge name
+
 ```
 class {'java':
   distribution          => 'jdk',
