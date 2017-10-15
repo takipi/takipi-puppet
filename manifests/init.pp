@@ -38,6 +38,7 @@ class takipi (
     class {'java':
        distribution          => 'jdk',
        package               => undef, # can be for example 'java-1.8.0-openjdk',
+       before		     => Class['takipi']
      }
   }
 
@@ -82,5 +83,5 @@ class takipi (
     logoutput => true,
     unless    => "/bin/grep -q ${secret_key} /opt/takipi/work/secret.key",
   }
-    Class['java'] -> Class['takipi']
 }
+include takipi
