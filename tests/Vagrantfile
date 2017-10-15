@@ -12,7 +12,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	  config.vm.define "#{i}" do |node|
 	    node.vm.box = "#{i.sub '_', '/'}"
 	    node.vm.hostname = "takipi-dev"
-	    node.vm.synced_folder "~/", "/host-home"
 	    node.vm.synced_folder ".", "/vagrant"
 	    node.vm.synced_folder  "../", "/etc/puppet/modules/takipi" 
 	    
