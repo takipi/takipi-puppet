@@ -90,6 +90,8 @@ class {'::takipi':
 
 Basic usage of .Net agent:
 
+copy the takipi module to the puppet modules path (for example C:\Program Files\Puppet Labs\Puppet\puppet\modules\takipi)
+
 ```
 include takipi
 class {'::takipi':
