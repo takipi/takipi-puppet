@@ -118,8 +118,10 @@ class takipi (
         fail("Collector host or port not provided")
       }
 
+      $overops_guid = "{6EB3F996-C92A-4D30-BDA6-75A7B20029EE}"
+
       exec { 'remove_overops':
-        command => 'C:\Windows\System32\msiexec.exe /x {6EB3F996-C92A-4D30-BDA6-75A7B20029EE} /qn /norestart',
+        command => "C:\\Windows\\System32\\msiexec.exe /x $overops_guid /qn /norestart",
         returns => ['0','1605'], # 0-was removed, 1605-doesn't exist
       }
 

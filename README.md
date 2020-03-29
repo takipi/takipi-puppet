@@ -24,9 +24,9 @@ Java agent currently supports RPM and DEB-based Linux distributions.
 
 ## Module Description
 
-Takipi installs a daemon process^ and a VM agent library on your servers. These two components work in tandem to log and send data to Takipi's analysis servers. Together they detect events (such as exceptions or logged errors) happening within your app and automatically create the code needed to log and collect the data you'll need to debug these errors in production.
+Takipi deploys a VM agent library and a daemon process (called collector and deployed only in Java agent installation) on your servers. These two components work in tandem to log and send data to Takipi's analysis servers. Together they detect events (such as exceptions or logged errors) happening within your app and automatically create the code needed to log and collect the data you'll need to debug these errors in production.
 
-^ Only in java agent.
+.Net agent requiers an installation of remote collector.
 
 ## Setup
 
@@ -39,7 +39,7 @@ Java agent:
 
 .Net agent:
 * Removes previous .Net agent.
-* Downloads and installs a msi of the agent.
+* Downloads and installs an msi of the agent.
 
 ### Setup Requirements 
 
