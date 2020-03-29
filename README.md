@@ -98,6 +98,7 @@ class {'::takipi':
     secret_key  => 'YOUR_SECRET_KEY',
     collector_host => 'YOUR_COLLECTOR_IP',
     collector_port => 'YOUR_COLLECTOR_PORT',
+    windows_temp_dir => 'C:\users\Administrator\Downloads',
 }
 
 ```
