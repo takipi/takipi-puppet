@@ -126,7 +126,7 @@ class takipi (
       }
 
       if $source == undef {
-        $pkg_url = 'https://app-takipi-com.s3.amazonaws.com/deploy/win/Takipi.msi' 
+        $pkg_url = 'https://app-takipi-com.s3.amazonaws.com/deploy/win/OverOps.msi' 
       } else {
         $pkg_url = $source
       }
